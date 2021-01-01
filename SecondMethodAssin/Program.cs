@@ -8,10 +8,23 @@ namespace SecondMethodAssin
         {
             twoMeths math = new twoMeths();
             int userNum;
-            Console.WriteLine("Input two numbers, one at a time. You don't need to enter anything for the second number");
+            string userNum2;
+            Console.WriteLine("Input two numbers, one at a time.");
             userNum = Convert.ToInt32(Console.ReadLine());
-            math.OptionMath(userNum);
-            Console.WriteLine(math.OptionMath(userNum));
+            Console.WriteLine("You don't have to input a second number, up to you.");
+            userNum2 = Console.ReadLine();
+            if(userNum2 == "")
+            {
+                math.OptionMath(userNum);
+                Console.WriteLine(math.OptionMath(userNum));
+            }
+            else
+            {
+                int result;
+                result = Convert.ToInt32(userNum2);
+                math.OptionMath(result);
+                Console.WriteLine(math.OptionMath(result));
+            }
         }
     }
 }
