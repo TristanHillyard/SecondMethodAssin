@@ -9,7 +9,7 @@ namespace SecondMethodAssin
         public int OptionMath(int num1, int num2 = 10)
         {
             int result;
-            result = num1 + 11;
+            result = num1 + num2;
             return result;
         }
     }
